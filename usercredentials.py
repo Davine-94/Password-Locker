@@ -4,7 +4,7 @@ class User:
     """
 
     user_list = []
-def __init__(self, first_name, sur_name, user_name, email, password):
+    def __init__(self, first_name, sur_name, user_name, email, password):
     
         """
         __init__ method to define properties for object User
@@ -19,3 +19,13 @@ def __init__(self, first_name, sur_name, user_name, email, password):
         self.user_name = user_name
         self.email = email
         self.password = password
+    def save_user(self):
+        """
+        save_user saves User objects into user_list
+        """
+        User.user_list.append(self)
+    def delete_user(self):
+        """
+        delete_user removes User objects from user_list
+        """
+        User.user_list.remove(self)
