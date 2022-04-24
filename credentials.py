@@ -19,9 +19,15 @@ class Credentials:
         self.site_name = site_name
         self.user_name = user_name
         self.password = password
+    
     def save_credentials(self):
         """
         save_credentials saves new instances to credentials_list array
         """
         Credentials.credentials_list.append(self)
-
+        
+    def delete_credentials(self):
+        """
+        delete_credentials removes existing instances from credentials_list array
+        """
+        Credentials.credentials_list.remove(self)
