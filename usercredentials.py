@@ -29,3 +29,12 @@ class User:
         delete_user removes User objects from user_list
         """
         User.user_list.remove(self)
+        
+    @classmethod
+    def user_login(cls, user_name, password):
+        """
+        user_login checks whether username and password are correct
+        """
+        for user in cls.user_list:
+            if user.user_name == user_name and user.password == password:
+                return True
