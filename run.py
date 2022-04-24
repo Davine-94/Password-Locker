@@ -69,9 +69,7 @@ def password_builder():
 
 def run():
     print(" ")
-    print("*" * 80)
     print("WELCOME TO PASSWORD LOCKER")
-    print("*" * 80)
     while True:
         print(" ")
         print("=" * 80)
